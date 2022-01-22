@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UBER EATS</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script>
+        function showOther() {
+            var a = document.querySelectorAll(".menu__pos");
+            a.forEach(element => element.setAttribute("isHidden", "true"));
+            var b = document.querySelector(".Stub");
+            b.removeAttribute("isHidden");
+        }
+        function showSnacks() {
+            var a = document.querySelectorAll(".menu__pos");
+            a.forEach(element => element.removeAttribute("isHidden"));
+            var b = document.querySelector(".Stub");
+            b.setAttribute("isHidden", "true");
+        }
+    </script>
 </head>
 <body>
    
@@ -44,16 +58,19 @@
             </div>
             <div class="head__menu">
                 <ul class="menu__list">
-                    <li>Закуски</li>
-                    <li>Салаты</li>
-                    <li>Супы</li>
-                    <li>Горячие блюда</li>
-                    <li>Гарниры</li>
-                    <li>Десерты</li>
+                    <li onclick="showSnacks()">Закуски</li>
+                    <li onclick="showOther()">Салаты</li>
+                    <li onclick="showOther()">Супы</li>
+                    <li onclick="showOther()">Горячие блюда</li>
+                    <li onclick="showOther()">Гарниры</li>
+                    <li onclick="showOther()">Десерты</li>
                 </ul>
             </div>
             <h2>Закуски</h2>
             <div class="menu__content">
+                <div class="Stub" isHidden="true">
+                    <p style="font-size: 32px;">Здесь контента нет</p>
+                </div>
                 <div class="menu__pos">
                     <img src="./img/seld.jpg" alt="сельдь">
                     <h3>Сельдь на бородинском хлебе</h3>
