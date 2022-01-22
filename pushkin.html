@@ -7,20 +7,14 @@
     <link rel="stylesheet" href="./css/style.css">
     <script>
         function showOther(currentTitle) {
-            var a = document.querySelectorAll(".menu__pos");
-            a.forEach(element => element.setAttribute("isHidden", "true"));
-            var b = document.querySelector(".Stub");
-            b.removeAttribute("isHidden");
-            var c = document.querySelector("h2");
-            c.textContent = `${currentTitle}`
+            document.querySelectorAll(".menu__pos").forEach(element => element.setAttribute("isHidden", "true"));
+            document.querySelector(".Stub").removeAttribute("isHidden");
+            document.querySelector("h2").textContent = `${currentTitle}`
         }
         function showSnacks() {
-            var a = document.querySelectorAll(".menu__pos");
-            a.forEach(element => element.removeAttribute("isHidden"));
-            var b = document.querySelector(".Stub");
-            b.setAttribute("isHidden", "true");
-            var c = document.querySelector("h2");
-            c.textContent = "Закуски";
+            document.querySelectorAll(".menu__pos").forEach(element => element.removeAttribute("isHidden"));
+            document.querySelector(".Stub").setAttribute("isHidden", "true");
+            document.querySelector("h2").textContent = "Закуски";
         }
     </script>
 </head>
