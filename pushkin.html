@@ -6,17 +6,21 @@
     <title>UBER EATS</title>
     <link rel="stylesheet" href="./css/style.css">
     <script>
-        function showOther() {
+        function showOther(currentTitle) {
             var a = document.querySelectorAll(".menu__pos");
             a.forEach(element => element.setAttribute("isHidden", "true"));
             var b = document.querySelector(".Stub");
             b.removeAttribute("isHidden");
+            var c = document.querySelector("h2");
+            c.textContent = `${currentTitle}`
         }
         function showSnacks() {
             var a = document.querySelectorAll(".menu__pos");
             a.forEach(element => element.removeAttribute("isHidden"));
             var b = document.querySelector(".Stub");
             b.setAttribute("isHidden", "true");
+            var c = document.querySelector("h2");
+            c.textContent = "Закуски";
         }
     </script>
 </head>
@@ -59,11 +63,11 @@
             <div class="head__menu">
                 <ul class="menu__list">
                     <li onclick="showSnacks()">Закуски</li>
-                    <li onclick="showOther()">Салаты</li>
-                    <li onclick="showOther()">Супы</li>
-                    <li onclick="showOther()">Горячие блюда</li>
-                    <li onclick="showOther()">Гарниры</li>
-                    <li onclick="showOther()">Десерты</li>
+                    <li onclick="showOther(this.textContent)">Салаты</li>
+                    <li onclick="showOther(this.textContent)">Супы</li>
+                    <li onclick="showOther(this.textContent)">Горячие блюда</li>
+                    <li onclick="showOther(this.textContent)">Гарниры</li>
+                    <li onclick="showOther(this.textContent)">Десерты</li>
                 </ul>
             </div>
             <h2>Закуски</h2>
