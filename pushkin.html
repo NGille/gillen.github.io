@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="./css/style.css">
     <script>
         function showOther(currentTitle) {
-            document.querySelectorAll(".menu__pos").forEach(element => element.setAttribute("isHidden", "true"));
+            document.querySelectorAll(".menu_pos").forEach(element => element.setAttribute("isHidden", "true"));
             document.querySelector(".Stub").removeAttribute("isHidden");
             document.querySelector("h2").textContent = `${currentTitle}`
         }
         function showSnacks() {
-            document.querySelectorAll(".menu__pos").forEach(element => element.removeAttribute("isHidden"));
+            document.querySelectorAll(".menu_pos").forEach(element => element.removeAttribute("isHidden"));
             document.querySelector(".Stub").setAttribute("isHidden", "true");
             document.querySelector("h2").textContent = "Закуски";
         }
@@ -24,14 +24,14 @@
 
      <header class="header">
         <div class="wrapper">
-           <div class="header__wrapper">
-                <div class="header__logo">
-                    <a href="./index.html" class="header__logo-link">
-                        <img src="./img/svg/logo.svg" alt="ubereats" class="header__logo-pic">
+           <div class="header_wrapper">
+                <div class="header_logo">
+                    <a href="./index.html" class="header_logo-link">
+                        <img src="./img/svg/logo.svg" alt="ubereats" class="header_logo-pic">
                     </a>
                 </div>
 
-            <nav class="header__nav">
+            <nav class="header_nav">
                 <div class="buttons">
                     <button class="signin">Войти</button>
                     <button class="basket">
@@ -47,15 +47,15 @@
 
     <!--main content start-->
     <main>
-        <div class="background__title"></div>
+        <div class="background_title"></div>
         <div class="wrapper">
-            <div class="push__title">
+            <div class="push_title">
                 <h1>Трактир "Пушкин"</h1>
                 <p>₽₽₽ • Европейская</p>
                 <div class="time">40 - 50 мин</div>
             </div>
-            <div class="head__menu">
-                <ul class="menu__list">
+            <div class="head_menu">
+                <ul class="menu_list">
                     <li onclick="showSnacks()">Закуски</li>
                     <li onclick="showOther(this.textContent)">Салаты</li>
                     <li onclick="showOther(this.textContent)">Супы</li>
@@ -65,37 +65,37 @@
                 </ul>
             </div>
             <h2>Закуски</h2>
-            <div class="menu__content">
+            <div class="menu_content">
                 <div class="Stub" isHidden="true">
                     <p style="font-size: 32px;">Здесь контента нет</p>
                 </div>
-                <div class="menu__pos">
+                <div class="menu_pos">
                     <img src="./img/seld.jpg" alt="сельдь">
                     <h3>Сельдь на бородинском хлебе</h3>
                     <p class="description">С яйцом и огурцом</p>
                     <p class="price">240 ₽</p>  
                 </div>
-                <div class="menu__pos">
+                <div class="menu_pos">
                     <img src="./img/assorti.jpg" alt="ассорти">
                     <h3>Соленья ассорти</h3>
                     <p class="price">320 ₽</p>
                 </div>
-                <div class="menu__pos">
+                <div class="menu_pos">
                     <img src="./img/gribi.jpg" alt="грибы">
                     <h3>Грибы маринованные</h3>
                     <p class="price">300 ₽</p>
                 </div>
-                <div class="menu__pos">
+                <div class="menu_pos">
                     <img src="./img/salo.jpg" alt="сало">
                     <h3>Сало домашнее с горчицей</h3>
                     <p class="price">320 ₽</p>
                 </div>
-                <div class="menu__pos">
+                <div class="menu_pos">
                     <img src="./img/semga.jpg" alt="семга">
                     <h3>Малосольная семга</h3>
                     <p class="price">390 ₽</p>
                 </div>
-                <div class="menu__pos">
+                <div class="menu_pos">
                     <img src="./img/yazik.jpg" alt="язык">
                     <h3>Язык говяжий с хреном</h3>
                     <p class="price">350 ₽</p>
@@ -108,33 +108,33 @@
     <!--footer start-->
     <footer class="footer">
         <div class="wrapper">
-            <div class="footer__item">
-                <div class="footer__row">
-                    <div class="footer__logo">
+            <div class="footer_item">
+                <div class="footer_row">
+                    <div class="footer_logo">
                      <img src="./img/svg/logo-footer.svg" alt="ubereats">
                  </div>
                 </div>
-                <div class="footer__row">
-                    <div class="footer__col">
+                <div class="footer_row">
+                    <div class="footer_col">
                         <div class="language-list"></div>
                         <div class="hashtag">
                             <img src="./img/hashtag.png" alt="#">
                             <img src="./img/UberEats.png" alt="ubereats">
                         </div>
-                        <div class="social__links">
+                        <div class="social_links">
                             <img src="./img/svg/facebook.svg" alt="facebook">
                             <img src="./img/svg/twitter.svg" alt="twitter">
                             <img src="./img/svg/instagram.svg" alt="instagram">
                         </div>
                     </div>
-                    <div class="footer__col">
+                    <div class="footer_col">
                         <ul class="contacts">
                             <li><a href="#">Об UberEats</a></li>
                             <li><a href="#">Станьте партнёром по доставке</a></li>
                             <li><a href="#">Станьте парнёром-рестораном</a></li>
                         </ul>
                     </div>
-                    <div class="footer__col">
+                    <div class="footer_col">
                         <ul class="info">
                             <li><a href="#">Все города</a></li>
                             <li><a href="#">Цены</a></li>
@@ -143,18 +143,18 @@
                         </ul>
                     </div>
                 </div>
-                <div class="footer__row">
-                    <div class="footer__col">
+                <div class="footer_row">
+                    <div class="footer_col">
                         <img src="./img/appstore.png" alt="AppStore">
                     </div>
-                    <div class="footer__col">
+                    <div class="footer_col">
                         <img src="./img/googleplay.png" alt="GooglePlay">
                     </div>
                 </div>
-                <div class="footer__row">
-                    <div class="footer__col">© 2017 Uber Technologies Inc.</div>
-                    <div class="footer__col">Обработка персональных данных</div>
-                    <div class="footer__col">Пользовательское соглашение</div>
+                <div class="footer_row">
+                    <div class="footer_col">© 2017 Uber Technologies Inc.</div>
+                    <div class="footer_col">Обработка персональных данных</div>
+                    <div class="footer_col">Пользовательское соглашение</div>
                 </div>
             </div>
         </div>
