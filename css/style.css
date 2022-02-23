@@ -584,8 +584,9 @@ textarea {
     background-size: cover;
 }
 .push_title {
-    width: 400px;
+    width: 320px;
     height: 204px;
+    padding: 5px;
     position: absolute;
     top: 150px;;
     background: white;
@@ -593,24 +594,19 @@ textarea {
 .push_title>h1 {
     position: relative;
     top: 38px;
-    left: 38px;
     font-size: 36px;
     font-weight: 400;
 }
 .push_title>p {
     position: relative;
     top: 120px;
-    left: 38px;
     font-size: 14px;
     font-weight: 400;
 }
 .time {
     position: relative;
-    top: 98px;
-    left: 276px;
+    margin: 98px 0 0 auto;
     width: 100px;
-    height: 32px;
-    text-align: center;
     color: #FFFFFF;
     background: #262626;
     border-radius: 15px;
@@ -665,6 +661,7 @@ h2 {
     width: 170px;
     height: 160px;
     float: right;
+    margin-left: 16px;
 }
 h3 {
     position: relative;
@@ -684,8 +681,8 @@ p.description {
     color: #626262;
 }
 .menu_pos p.price {
-    position: relative;
-    top: 80px;
+    position: absolute;
+    bottom: 16px;
     left: 16px;
     font-size: 15px;
     line-height: 21px;
