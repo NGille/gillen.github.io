@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="./css/style.css">
     <script>
         function showOther(currentTitle) {
-            document.querySelectorAll(".menu_pos").forEach(element => element.setAttribute("isHidden", "true"));
-            document.querySelector(".Stub").removeAttribute("isHidden");
+            document.querySelectorAll(".menu__pos").forEach(element => element.hidden = true);
+            document.querySelector(".Stub").hidden = false;
             document.querySelector("h2").textContent = `${currentTitle}`
         }
         function showSnacks() {
-            document.querySelectorAll(".menu_pos").forEach(element => element.removeAttribute("isHidden"));
-            document.querySelector(".Stub").setAttribute("isHidden", "true");
+            document.querySelectorAll(".menu__pos").forEach(element => element.hidden = false);
+            document.querySelector(".Stub").hidden = true;
             document.querySelector("h2").textContent = "Закуски";
         }
     </script>
@@ -66,7 +66,7 @@
             </div>
             <h2>Закуски</h2>
             <div class="menu_content">
-                <div class="Stub" isHidden="true">
+                <div hidden class="Stub">
                     <p style="font-size: 32px;">Здесь контента нет</p>
                 </div>
                 <div class="menu_pos">
