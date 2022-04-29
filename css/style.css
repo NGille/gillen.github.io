@@ -690,9 +690,6 @@ p.description {
     line-height: 21px;
     color: black;
 }
-[isHidden="true"] {
-    display: none;
-}
 /*pushkin style end*/
 
 @media (max-width: 767px) {
