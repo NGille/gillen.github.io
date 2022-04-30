@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="./css/style.css">
     <script>
         function showOther(currentTitle) {
-            document.querySelectorAll(".menu__pos").forEach(element => element.hidden = true);
+            document.querySelectorAll(".menu_pos").forEach(element => element.hidden = true);
             document.querySelector(".Stub").hidden = false;
             document.querySelector("h2").textContent = `${currentTitle}`
         }
         function showSnacks() {
-            document.querySelectorAll(".menu__pos").forEach(element => element.hidden = false);
+            document.querySelectorAll(".menu_pos").forEach(element => element.hidden = false);
             document.querySelector(".Stub").hidden = true;
             document.querySelector("h2").textContent = "Закуски";
         }
