@@ -9,7 +9,7 @@
         function showOther(currentTitle) {
             document.querySelectorAll(".menu_pos").forEach(element => element.hidden = true);
             document.querySelector(".Stub").hidden = false;
-            document.querySelector("h2").textContent = `${currentTitle}`
+            document.querySelector("h2").textContent = currentTitle;
         }
         function showSnacks() {
             document.querySelectorAll(".menu_pos").forEach(element => element.hidden = false);
@@ -57,11 +57,11 @@
             <div class="head_menu">
                 <ul class="menu_list">
                     <li onclick="showSnacks()">Закуски</li>
-                    <li onclick="showOther(this.textContent)">Салаты</li>
-                    <li onclick="showOther(this.textContent)">Супы</li>
-                    <li onclick="showOther(this.textContent)">Горячие блюда</li>
-                    <li onclick="showOther(this.textContent)">Гарниры</li>
-                    <li onclick="showOther(this.textContent)">Десерты</li>
+                    <li onclick="showOther(this.innerHTML)">Салаты</li>
+                    <li onclick="showOther(this.innerHTML)">Супы</li>
+                    <li onclick="showOther(this.innerHTML)">Горячие блюда</li>
+                    <li onclick="showOther(this.innerHTML)">Гарниры</li>
+                    <li onclick="showOther(this.innerHTML)">Десерты</li>
                 </ul>
             </div>
             <h2>Закуски</h2>
