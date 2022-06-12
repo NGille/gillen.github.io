@@ -6,16 +6,21 @@
     <title>UBER EATS</title>
     <link rel="stylesheet" href="./css/style.css">
     <script>
-        function showOther(currentTitle) {
-            document.querySelectorAll(".menu_pos").forEach(element => element.hidden = true);
-            document.querySelector(".Stub").hidden = false;
-            document.querySelector("h2").textContent = currentTitle;
-        }
-        function showSnacks() {
-            document.querySelectorAll(".menu_pos").forEach(element => element.hidden = false);
-            document.querySelector(".Stub").hidden = true;
-            document.querySelector("h2").textContent = "Закуски";
-        }
+        let menu = document.getElementById('menu')
+        menu.addEventListener('click' function(event) {
+            if (event.target.dataset.content) {
+                if (event.target.dataset.content > 0) {
+                    document.querySelectorAll(".menu_pos").forEach(element => element.hidden = false);
+                    document.querySelector(".Stub").hidden = true;
+                    document.querySelector("h2").textContent = "Закуски";
+                }
+                if (event.target.dataset.content < 0) {
+                    document.querySelectorAll(".menu_pos").forEach(element => element.hidden = false);
+                    document.querySelector(".Stub").hidden = true;
+                    document.querySelector("h2").textContent = "Закуски";
+                }
+            }
+        })
     </script>
 </head>
 <body>
@@ -55,13 +60,13 @@
                 <div class="time">40 - 50 мин</div>
             </div>
             <div class="head_menu">
-                <ul class="menu_list">
-                    <li onclick="showSnacks()">Закуски</li>
-                    <li onclick="showOther(this.innerHTML)">Салаты</li>
-                    <li onclick="showOther(this.innerHTML)">Супы</li>
-                    <li onclick="showOther(this.innerHTML)">Горячие блюда</li>
-                    <li onclick="showOther(this.innerHTML)">Гарниры</li>
-                    <li onclick="showOther(this.innerHTML)">Десерты</li>
+                <ul id="menu" class="menu_list">
+                    <li data-cont="1">Закуски</li>
+                    <li data-cont="-1">Салаты</li>
+                    <li data-cont="-1">Супы</li>
+                    <li data-cont="-1">Горячие блюда</li>
+                    <li data-cont="-1">Гарниры</li>
+                    <li data-cont="-1">Десерты</li>
                 </ul>
             </div>
             <h2>Закуски</h2>
