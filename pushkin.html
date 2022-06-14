@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="./css/style.css">
     <script>
         let menu = document.getElementById('menu')
-        menu.addEventListener('click' function(event) {
-            if (event.target.dataset.content) {
-                if (event.target.dataset.content > 0) {
+        menu.addEventListener('click', function(event) {
+            if (event.target.dataset.cont) {
+                if (event.target.dataset.cont > 0) {
                     document.querySelectorAll(".menu_pos").forEach(element => element.hidden = false);
                     document.querySelector(".Stub").hidden = true;
                     document.querySelector("h2").textContent = "Закуски";
                 }
-                if (event.target.dataset.content < 0) {
-                    document.querySelectorAll(".menu_pos").forEach(element => element.hidden = false);
-                    document.querySelector(".Stub").hidden = true;
-                    document.querySelector("h2").textContent = "Закуски";
+                if (event.target.dataset.cont < 0) {
+                    document.querySelectorAll(".menu_pos").forEach(element => element.hidden = true);
+                    document.querySelector(".Stub").hidden = false;
+                    document.querySelector("h2").textContent = event.target.textContent;
                 }
             }
         })
