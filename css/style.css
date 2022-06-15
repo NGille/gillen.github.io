@@ -638,7 +638,7 @@ h2 {
     line-height: 34px;
     margin-bottom: 32px;
 }
-.menu_content {
+.menu_section {
     display: grid;
     grid-template-columns: repeat(auto-fill, 470px);
     column-gap: 16px;
@@ -702,7 +702,7 @@ p.description {
 	padding: 5px;
 }
 @media (max-width: 980px) {
-    .menu_content {
+    .menu_section {
         display: grid;
         grid-template-columns: repeat(auto-fill, 98%);
     }
